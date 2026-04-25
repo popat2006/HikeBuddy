@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HikeBuddy - Your Hiking Companion</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-mountain"></i>
+                <h1>HikeBuddy</h1>
+            </div>
+            <p class="tagline">Your guide to the great outdoors</p>
+        </div>
+    </header>
+
+    <nav class="tab-nav">
+        <div class="container">
+            <button class="tab-btn active" data-tab="home">
+                <i class="fas fa-home"></i> Home
+            </button>
+            <button class="tab-btn" data-tab="getting-started">
+                <i class="fas fa-hiking"></i> Getting Started
+            </button>
+            <button class="tab-btn" data-tab="gear">
+                <i class="fas fa-backpack"></i> Gear Guide
+            </button>
+            <button class="tab-btn" data-tab="safety">
+                <i class="fas fa-first-aid"></i> Safety Tips
+            </button>
+            <button class="tab-btn" data-tab="trails">
+                <i class="fas fa-map-marked-alt"></i> Trail Finder
+            </button>
+            <button class="tab-btn" data-tab="hiking101">
+                <i class="fas fa-book"></i> Hiking 101
+            </button>
+            <button class="tab-btn" data-tab="gallery">
+                <i class="fas fa-images"></i> Photo Gallery
+            </button>
+            <button class="tab-btn" data-tab="resources">
+                <i class="fas fa-link"></i> Resources
+            </button>
+            <button class="tab-btn" data-tab="faq">
+                <i class="fas fa-question-circle"></i> FAQ
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Home Tab -->
+        <section id="home" class="tab-content active">
+            <div class="hero">
+                <h2>Welcome to HikeBuddy!</h2>
+                <p class="lead">Your ultimate companion for hiking adventures. Whether you're taking your first steps on a trail or looking to expand your hiking knowledge, we're here to help.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-route"></i>
+                        <h3>Trails</h3>
+                        <p>Discover amazing paths</p>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Safety</h3>
+                        <p>Stay safe outdoors</p>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <h3>Community</h3>
+                        <p>Connect with hikers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-block">
+                <h3>What is HikeBuddy?</h3>
+                <p>HikeBuddy is a comprehensive resource for hikers of all levels, with a special focus on helping newcomers discover the joy of hiking. Our website provides essential information, safety tips, gear recommendations, and much more.</p>
+                <p>Explore the tabs above to learn more about different aspects of hiking!</p>
+            </div>
+        </section>
+
+        <!-- Getting Started Tab -->
+        <section id="getting-started" class="tab-content">
+            <h2>Getting Started with Hiking</h2>
+            <p class="lead">New to hiking? Here's everything you need to know to start your journey.</p>
+
+            <div class="content-block">
+                <h3><i class="fas fa-footprints"></i> First Steps</h3>
+                <ul>
+                    <li>Start with easy, well-marked trails</li>
+                    <li>Hike with a friend or group initially</li>
+                    <li>Check the weather forecast before heading out</li>
+                    <li>Tell someone where you're going and when you'll be back</li>
+                    <li>Start early to avoid afternoon thunderstorms</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-clock"></i> Plan Your First Hike</h3>
+                <ol>
+                    <li>Research local trails suitable for beginners</li>
+                    <li>Check trail conditions and closures</li>
+                    <li>Prepare your gear the night before</li>
+                    <li>Pack plenty of water and snacks</li>
+                    <li>Wear appropriate clothing and footwear</li>
+                </ol>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-exclamation-triangle"></i> Common Mistakes to Avoid</h3>
+                <ul>
+                    <li>Don't overestimate your fitness level</li>
+                    <li>Avoid hiking alone as a beginner</li>
+                    <li>Don't forget to check the weather</li>
+                    <li>Never leave trash on the trail</li>
+                    <li>Don't ignore signs of fatigue or dehydration</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Gear Guide Tab -->
+        <section id="gear" class="tab-content">
+            <h2>Gear Guide</h2>
+            <p class="lead">Essential equipment for safe and enjoyable hiking.</p>
+
+            <div class="content-block">
+                <h3><i class="fas fa-shoe-prints"></i> Footwear</h3>
+                <p>Good hiking boots or shoes are crucial. Look for:</p>
+                <ul>
+                    <li>Proper fit with wiggle room for toes</li>
+                    <li>Good ankle support for uneven terrain</li>
+                    <li>Waterproof or water-resistant materials</li>
+                    <li>Aggressive tread for traction</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-tshirt"></i> Clothing</h3>
+                <p>Dress in layers for changing conditions:</p>
+                <ul>
+                    <li>Moisture-wicking base layer</li>
+                    <li>Insulating mid-layer (fleece or down)</li>
+                    <li>Waterproof/windproof outer shell</li>
+                    <li>Extra socks (wool or synthetic)</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-backpack"></i> Essentials to Pack</h3>
+                <div class="gear-grid">
+                    <div class="gear-item">
+                        <i class="fas fa-tint"></i>
+                        <h4>Water</h4>
+                        <p>At least 2 liters per person</p>
+                    </div>
+                    <div class="gear-item">
+                        <i class="fas fa-utensils"></i>
+                        <h4>Food</h4>
+                        <p>Snacks and lunch for energy</p>
+                    </div>
+                    <div class="gear-item">
+                        <i class="fas fa-map"></i>
+                        <h4>Navigation</h4>
+                        <p>Map, compass, or GPS device</p>
+                    </div>
+                    <div class="gear-item">
+                        <i class="fas fa-sun"></i>
+                        <h4>Sun Protection</h4>
+                        <p>Sunscreen, hat, sunglasses</p>
+                    </div>
+                    <div class="gear-item">
+                        <i class="fas fa-first-aid"></i>
+                        <h4>First Aid</h4>
+                        <p>Basic kit with essentials</p>
+                    </div>
+                    <div class="gear-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Light</h4>
+                        <p>Headlamp or flashlight</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-dollar-sign"></i> Budget Tips</h3>
+                <p>You don't need to spend a fortune to start hiking:</p>
+                <ul>
+                    <li>Borrow gear from friends initially</li>
+                    <li>Check thrift stores for outdoor clothing</li>
+                    <li>Look for sales at outdoor retailers</li>
+                    <li>Invest in good footwear first</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Safety Tips Tab -->
+        <section id="safety" class="tab-content">
+            <h2>Safety Tips</h2>
+            <p class="lead">Stay safe and enjoy the outdoors responsibly.</p>
+
+            <div class="content-block warning">
+                <h3><i class="fas fa-exclamation-triangle"></i> The 10 Essentials</h3>
+                <p>Always carry these items on every hike:</p>
+                <ol>
+                    <li>Navigation (map and compass)</li>
+                    <li>Sun protection (sunglasses and sunscreen)</li>
+                    <li>Insulation (extra clothing)</li>
+                    <li>Illumination (headlamp/flashlight)</li>
+                    <li>First-aid supplies</li>
+                    <li>Fire (matches/lighter)</li>
+                    <li>Repair kit and tools</li>
+                    <li>Nutrition (extra food)</li>
+                    <li>Hydration (extra water)</li>
+                    <li>Emergency shelter</li>
+                </ol>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-cloud-sun-rain"></i> Weather Awareness</h3>
+                <ul>
+                    <li>Check forecast before leaving</li>
+                    <li>Know the signs of approaching storms</li>
+                    <li>Descend from peaks if thunderstorms approach</li>
+                    <li>Be prepared for temperature drops at higher elevations</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-paw"></i> Wildlife Safety</h3>
+                <ul>
+                    <li>Make noise to avoid surprising animals</li>
+                    <li>Store food properly (bear canisters where required)</li>
+                    <li>Keep a safe distance from all wildlife</li>
+                    <li>Know what animals live in the area you're hiking</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-phone"></i> Emergency Preparedness</h3>
+                <ul>
+                    <li>Carry a fully charged phone (but don't rely on it)</li>
+                    <li>Know your location using maps or GPS</li>
+                    <li>Pack a whistle to signal for help</li>
+                    <li>Learn basic first aid and CPR</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Trail Finder Tab -->
+        <section id="trails" class="tab-content">
+            <h2>Trail Finder</h2>
+            <p class="lead">Discover amazing trails for your next adventure.</p>
+            <p class="placeholder-note"><em>Content coming soon! This section will feature curated trail recommendations, difficulty ratings, and user reviews.</em></p>
+
+            <div class="content-block">
+                <h3><i class="fas fa-search"></i> What to Look For in a Trail</h3>
+                <ul>
+                    <li>Distance and elevation gain appropriate for your fitness level</li>
+                    <li>Trail condition reports</li>
+                    <li>Seasonal accessibility</li>
+                    <li>Permit requirements</li>
+                    <li>Parking availability</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-layer-group"></i> Difficulty Levels</h3>
+                <div class="difficulty-levels">
+                    <div class="level easy">
+                        <h4>Easy</h4>
+                        <p>Flat terrain, well-maintained paths, suitable for beginners</p>
+                    </div>
+                    <div class="level moderate">
+                        <h4>Moderate</h4>
+                        <p>Some elevation gain, may have rocky sections</p>
+                    </div>
+                    <div class="level hard">
+                        <h4>Hard</h4>
+                        <p>Significant elevation, challenging terrain, experience required</p>
+                    </div>
+                    <div class="level expert">
+                        <h4>Expert</h4>
+                        <p>Technical terrain, dangerous conditions, for experienced hikers only</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hiking 101 Tab -->
+        <section id="hiking101" class="tab-content">
+            <h2>Hiking 101</h2>
+            <p class="lead">Learn the fundamentals of hiking etiquette, techniques, and terminology.</p>
+
+            <div class="content-block">
+                <h3><i class="fas fa-hands-helping"></i> Trail Etiquette</h3>
+                <ul>
+                    <li><strong>Yield to uphill hikers</strong> - Step aside and give space</li>
+                    <li><strong>Stay on the trail</strong> - Protect vegetation and prevent erosion</li>
+                    <li><strong>Pack it in, pack it out</strong> - Leave no trace</li>
+                    <li><strong>Right of way</strong> - Hikers going uphill have priority</li>
+                    <li><strong>Leash your dog</strong> - Where required, keep pets under control</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-shoe-prints"></i> Hiking Techniques</h3>
+                <ul>
+                    <li><strong>Pace yourself</strong> - Start slow and maintain a steady rhythm</li>
+                    <li><strong>Use trekking poles</strong> - Reduce knee strain on descents</li>
+                    <li><strong>Step consciously</strong> - Watch your footing on technical terrain</li>
+                    <li><strong>Rest regularly</strong> - Take breaks to hydrate and snack</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-book"></i> Common Terminology</h3>
+                <dl>
+                    <dt>Blaze</dt>
+                    <dd>Paint marks on trees or posts marking the trail</dd>
+                    <dt>Switchback</dt>
+                    <dd>Zigzag path used to climb steep slopes</dd>
+                    <dt>Cairn</dt>
+                    <dd>Stack of rocks marking the trail, especially above treeline</dd>
+                    <dt>Tree line</dt>
+                    <dd>Elevation above which trees cannot grow</dd>
+                    <dt>Base weight</dt>
+                    <dd>Weight of your pack without consumables (water, food)</dd>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Tab -->
+        <section id="gallery" class="tab-content">
+            <h2>Photo Gallery</h2>
+            <p class="lead">Share and explore beautiful hiking moments.</p>
+            <p class="placeholder-note"><em>Gallery coming soon! This section will showcase stunning hiking photos from various trails.</em></p>
+
+            <div class="content-block">
+                <h3><i class="fas fa-camera"></i> Photography Tips for Hikers</h3>
+                <ul>
+                    <li>Use natural lighting - golden hour provides the best shots</li>
+                    <li>Include people in landscape shots for scale</li>
+                    <li>Capture details like wildflowers and textures</li>
+                    <li>Protect your camera gear from elements</li>
+                    <li>Don't let photography distract from safety</li>
+                </ul>
+            </div>
+
+            <div class="photo-placeholder-grid">
+                <div class="photo-placeholder">
+                    <i class="fas fa-mountain"></i>
+                    <p>Mountain vistas</p>
+                </div>
+                <div class="photo-placeholder">
+                    <i class="fas fa-tree"></i>
+                    <p>Forest trails</p>
+                </div>
+                <div class="photo-placeholder">
+                    <i class="fas fa-water"></i>
+                    <p>Lakes & rivers</p>
+                </div>
+                <div class="photo-placeholder">
+                    <i class="fas fa-sun"></i>
+                    <p>Sunsets & sunrises</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Tab -->
+        <section id="resources" class="tab-content">
+            <h2>Resources</h2>
+            <p class="lead">Helpful tools, apps, and websites for hikers.</p>
+
+            <div class="content-block">
+                <h3><i class="fas fa-mobile-alt"></i> Recommended Apps</h3>
+                <ul>
+                    <li><strong>AllTrails</strong> - Trail maps, reviews, and tracking</li>
+                    <li><strong>Gaia GPS</strong> - Advanced mapping and navigation</li>
+                    <li><strong>PeakVisor</strong> - 3D maps and peak identification</li>
+                    <li><strong>Weather.gov</strong> - Accurate weather forecasts</li>
+                    <li><strong>Star Walk</strong> - Stargazing while camping</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-globe"></i> Useful Websites</h3>
+                <ul>
+                    <li><a href="https://www.alltrails.com" target="_blank">AllTrails.com</a> - Comprehensive trail database</li>
+                    <li><a href="https://www.rei.com/learn" target="_blank">REI Co-op Journal</a> - Expert advice and how-to guides</li>
+                    <li><a href="https://www.nps.gov" target="_blank">National Park Service</a> - Info on national parks and trails</li>
+                    <li><a href="https://www.lnt.org" target="_blank">Leave No Trace</a> - Outdoor ethics education</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-book"></i> Recommended Reading</h3>
+                <ul>
+                    <li>"Mountaineering: The Freedom of the Hills" - Comprehensive guide</li>
+                    <li>"Appalachian Trials" - Mental aspects of thru-hiking</li>
+                    <li>"The Hiking Book" - Practical advice for day hikers</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQ Tab -->
+        <section id="faq" class="tab-content">
+            <h2>Frequently Asked Questions</h2>
+            <p class="lead">Common questions from new hikers answered.</p>
+
+            <div class="content-block">
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> How fit do I need to be to start hiking?</h3>
+                    <p>You don't need to be an athlete! Start with short, easy trails and gradually increase difficulty. Regular walking is good preparation.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> What should I eat before a hike?</h3>
+                    <p>Eat a balanced meal with carbs and protein 1-2 hours before hiking. Avoid heavy, greasy foods that might cause stomach upset.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> How much water should I bring?</h3>
+                    <p>A general rule is 0.5 liters per hour of hiking in moderate conditions. Bring more in hot weather or on strenuous trails.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Can I hike if it's raining?</h3>
+                    <p>Yes, with proper gear! Wear waterproof clothing and avoid exposed ridges during thunderstorms. Check trail conditions as some trails become hazardous when wet.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Should I hike alone?</h3>
+                    <p>Beginners should hike with others. As you gain experience, solo hiking can be rewarding but requires extra safety precautions and telling someone your plans.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> What do I do if I get lost?</h3>
+                    <p>STOP: Stop, Think, Observe, Plan. Stay calm, don't panic. Use your map and compass, retrace your steps if possible, and signal for help if needed.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 HikeBuddy. Made with <i class="fas fa-heart"></i> for hikers everywhere.</p>
+            <p class="footer-links">
+                <a href="https://github.com/popat2006/HikeBuddy" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
