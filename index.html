@@ -252,8 +252,44 @@
         <section id="trails" class="tab-content">
             <h2>Trail Finder</h2>
             <p class="lead">Discover amazing trails for your next adventure.</p>
-            <p class="placeholder-note"><em>Content coming soon! This section will feature curated trail recommendations, difficulty ratings, and user reviews.</em></p>
 
+            <!-- Recommended Hikes Section -->
+            <div class="content-block">
+                <h3><i class="fas fa-star"></i> Recommended Hikes</h3>
+                <p>Our top picks based on personal experience:</p>
+                <div id="recommended-hikes" class="hike-grid">
+                    <p class="loading">Loading recommended hikes...</p>
+                </div>
+            </div>
+
+            <!-- Completed Hikes by Difficulty -->
+            <div class="content-block">
+                <h3><i class="fas fa-check-circle"></i> Completed Hikes</h3>
+                <p>Hikes completed and rated by our team:</p>
+
+                <div class="difficulty-section">
+                    <h4><i class="fas fa-circle" style="color: #4caf50;"></i> Easy Hikes</h4>
+                    <div id="easy-hikes" class="hike-grid">
+                        <p class="loading">Loading easy hikes...</p>
+                    </div>
+                </div>
+
+                <div class="difficulty-section">
+                    <h4><i class="fas fa-circle" style="color: #ff9800;"></i> Moderate Hikes</h4>
+                    <div id="moderate-hikes" class="hike-grid">
+                        <p class="loading">Loading moderate hikes...</p>
+                    </div>
+                </div>
+
+                <div class="difficulty-section">
+                    <h4><i class="fas fa-circle" style="color: #f44336;"></i> Hard Hikes</h4>
+                    <div id="hard-hikes" class="hike-grid">
+                        <p class="loading">Loading hard hikes...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What to Look For Section -->
             <div class="content-block">
                 <h3><i class="fas fa-search"></i> What to Look For in a Trail</h3>
                 <ul>
@@ -265,6 +301,7 @@
                 </ul>
             </div>
 
+            <!-- Difficulty Levels Reference -->
             <div class="content-block">
                 <h3><i class="fas fa-layer-group"></i> Difficulty Levels</h3>
                 <div class="difficulty-levels">
