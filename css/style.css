@@ -460,7 +460,7 @@ main {
 .hike-card {
     background: white;
     border-radius: 8px;
-    padding: 20px;
+    overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     border-left: 4px solid #ccc;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -481,6 +481,148 @@ main {
 
 .hike-card.hard {
     border-left-color: #f44336;
+}
+
+/* Hike Card Image */
+.hike-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.hike-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hike-card:hover .hike-image img {
+    transform: scale(1.05);
+}
+
+.hike-header {
+    padding: 15px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.hike-name {
+    color: #2c5530;
+    font-size: 1.2rem;
+    margin: 0;
+    flex: 1;
+}
+
+.recommended-badge {
+    background: #ffd700;
+    color: #333;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.hike-details {
+    padding: 0 20px 10px;
+    display: flex;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.hike-details i {
+    color: #4a7c59;
+    margin-right: 5px;
+}
+
+.hike-difficulty {
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.hike-difficulty.easy {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.hike-difficulty.moderate {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.hike-difficulty.hard {
+    background: #fce4ec;
+    color: #c62828;
+}
+
+/* Star Rating */
+.star-rating {
+    color: #ffd700;
+    font-size: 1rem;
+}
+
+.star-rating .fa-star,
+.star-rating .fa-star-half-alt {
+    margin-right: 2px;
+}
+
+.rating-number {
+    color: #666;
+    font-size: 0.9rem;
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+.hike-rating {
+    padding: 0 20px 10px;
+}
+
+/* Hike Notes */
+.hike-notes {
+    background: #f5f5f5;
+    padding: 10px 15px;
+    margin: 0 20px 10px;
+    border-radius: 5px;
+    font-style: italic;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.hike-notes i {
+    color: #999;
+    margin-right: 5px;
+}
+
+/* Hike Link */
+.hike-link {
+    display: block;
+    padding: 12px 20px;
+    background: #f0f7f2;
+    color: #4a7c59;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+    border-top: 1px solid #eee;
+}
+
+.hike-link:hover {
+    background: #e0efe2;
+    text-decoration: none;
+}
+
+.hike-link i {
+    margin-right: 5px;
 }
 
 .hike-header {

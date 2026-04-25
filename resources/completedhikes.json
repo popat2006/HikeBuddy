@@ -7,7 +7,8 @@
       "rating": 4.8,
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/old-rag-mountain",
       "notes": "Challenging rock scrambles, stunning 360° views. Best in fall for foliage.",
-      "recommended": true
+      "recommended": true,
+      "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop"
     },
     {
       "name": "Hawksbill Mountain",
@@ -16,7 +17,8 @@
       "rating": 4.7,
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/hawksbill-mountain",
       "notes": "Highest peak in Shenandoah NP. Short but steep climb.",
-      "recommended": true
+      "recommended": true,
+      "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&h=300&fit=crop"
     },
     {
       "name": "Mary's Rock",
@@ -25,7 +27,8 @@
       "rating": 4.6,
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/marys-rock",
       "notes": "Great vista views, popular trail. Can be crowded on weekends.",
-      "recommended": true
+      "recommended": true,
+      "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=400&h=300&fit=crop"
     },
     {
       "name": "Stony Man Mountain",
@@ -34,7 +37,8 @@
       "rating": 4.5,
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/stony-man-mountain",
       "notes": "Quick hike with amazing views. Perfect for families and beginners.",
-      "recommended": false
+      "recommended": false,
+      "image": "https://images.unsplash.com/photo-1448375240586-882707db888c?w=400&h=300&fit=crop"
     },
     {
       "name": "The Loft Mountain",
@@ -43,7 +47,8 @@
       "rating": 4.5,
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/loft-mountain",
       "notes": "Less crowded alternative with good views and wildflower spotting.",
-      "recommended": false
+      "recommended": false,
+      "image": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=400&h=300&fit=crop"
     },
     {
       "name": "Dark Hollow Falls",
@@ -52,7 +57,8 @@
       "rating": 4.4,
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/dark-hollow-falls",
       "notes": "Beautiful waterfall hike. Very popular, arrive early for parking.",
-      "recommended": true
+      "recommended": true,
+      "image": "https://images.unsplash.com/photo-1504851149312-7a8e488e8606?w=400&h=300&fit=crop"
     },
     {
       "name": "Whiteoak Canyon",
@@ -61,7 +67,8 @@
       "rating": 4.4,
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/white-oak-canyon",
       "notes": "Six waterfalls along the trail. Great for photography.",
-      "recommended": false
+      "recommended": false,
+      "image": "https://images.unsplash.com/photo-1559592149-15f398c21823?w=400&h=300&fit=crop"
     },
     {
       "name": "Jones Mountain",
@@ -70,7 +77,8 @@
       "rating": 4.3,
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/jones-mountain",
       "notes": "Longer hike, fewer crowds. Good endurance training.",
-      "recommended": false
+      "recommended": false,
+      "image": "https://images.unsplash.com/photo-1522163182402-834f871fd851?w=400&h=300&fit=crop"
     },
     {
       "name": "Rough Ridge",
@@ -79,7 +87,8 @@
       "rating": 4.3,
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/rough-ridge",
       "notes": "Boardwalk section with great views. Easy and rewarding.",
-      "recommended": false
+      "recommended": false,
+      "image": "https://images.unsplash.com/photo-1508693926297-1d14ee86dbd2?w=400&h=300&fit=crop"
     },
     {
       "name": "Robertson Mountain",
@@ -88,7 +97,8 @@
       "rating": 4.2,
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/robertson-mountain",
       "notes": "Less traveled trail, quiet and peaceful. Good solitude hike.",
-      "recommended": false
+      "recommended": false,
+      "image": "https://images.unsplash.com/photo-1561731216-c3a4d445d5c6?w=400&h=300&fit=crop"
     }
   ]
 }

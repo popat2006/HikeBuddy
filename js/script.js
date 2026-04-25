@@ -129,9 +129,14 @@ function generateStarRating(rating) {
 function createHikeCard(hike) {
     const difficultyClass = hike.difficulty.toLowerCase();
     const notesHTML = hike.notes ? `<p class="hike-notes"><i class="fas fa-quote-left"></i> ${hike.notes}</p>` : '';
+    const imageHTML = hike.image ? `
+        <div class="hike-image">
+            <img src="${hike.image}" alt="${hike.name} - Scenic view" loading="lazy">
+        </div>` : '';
 
     return `
         <div class="hike-card ${difficultyClass}">
+            ${imageHTML}
             <div class="hike-header">
                 <h4 class="hike-name">${hike.name}</h4>
                 ${hike.recommended ? '<span class="recommended-badge"><i class="fas fa-star"></i> Recommended</span>' : ''}
