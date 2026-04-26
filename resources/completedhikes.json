@@ -8,7 +8,7 @@
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/old-rag-mountain",
       "notes": "Challenging rock scrambles, stunning 360\u00b0 views. Best in fall for foliage.",
       "recommended": true,
-      "image": "trail_images/old_rag_mountain.jpg"
+      "image": "images/trail_images/old_rag_mountain.jpg"
     },
     {
       "name": "Hawksbill Mountain",
@@ -18,7 +18,7 @@
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/hawksbill-mountain",
       "notes": "Highest peak in Shenandoah NP. Short but steep climb.",
       "recommended": true,
-      "image": "trail_images/hawksbill_mountain.jpg"
+      "image": "images/trail_images/hawksbill_mountain.jpg"
     },
     {
       "name": "Mary's Rock",
@@ -28,7 +28,7 @@
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/marys-rock",
       "notes": "Great vista views, popular trail. Can be crowded on weekends.",
       "recommended": true,
-      "image": "trail_images/marys_rock.jpg"
+      "image": "images/trail_images/marys_rock.jpg"
     },
     {
       "name": "Stony Man Mountain",
@@ -38,7 +38,7 @@
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/stony-man-mountain",
       "notes": "Quick hike with amazing views. Perfect for families and beginners.",
       "recommended": false,
-      "image": "trail_images/stony_man_mountain.jpg"
+      "image": "images/trail_images/stony_man_mountain.jpg"
     },
     {
       "name": "The Loft Mountain",
@@ -48,7 +48,7 @@
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/loft-mountain",
       "notes": "Less crowded alternative with good views and wildflower spotting.",
       "recommended": false,
-      "image": "trail_images/the_loft_mountain.jpg"
+      "image": "images/trail_images/the_loft_mountain.jpg"
     },
     {
       "name": "Dark Hollow Falls",
@@ -58,7 +58,7 @@
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/dark-hollow-falls",
       "notes": "Beautiful waterfall hike. Very popular, arrive early for parking.",
       "recommended": true,
-      "image": "trail_images/dark_hollow_falls.jpg"
+      "image": "images/trail_images/dark_hollow_falls.jpg"
     },
     {
       "name": "Whiteoak Canyon",
@@ -68,7 +68,7 @@
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/white-oak-canyon",
       "notes": "Six waterfalls along the trail. Great for photography.",
       "recommended": false,
-      "image": "trail_images/whiteoak_canyon.jpg"
+      "image": "images/trail_images/whiteoak_canyon.jpg"
     },
     {
       "name": "Jones Mountain",
@@ -78,7 +78,7 @@
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/jones-mountain",
       "notes": "Longer hike, fewer crowds. Good endurance training.",
       "recommended": false,
-      "image": "trail_images/jones_mountain.jpg"
+      "image": "images/trail_images/jones_mountain.jpg"
     },
     {
       "name": "Rough Ridge",
@@ -88,7 +88,7 @@
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/rough-ridge",
       "notes": "Boardwalk section with great views. Easy and rewarding.",
       "recommended": false,
-      "image": "trail_images/rough_ridge.jpg"
+      "image": "images/trail_images/rough_ridge.jpg"
     },
     {
       "name": "Robertson Mountain",
@@ -98,7 +98,7 @@
       "link": "https://www.alltrails.com/trail/virginia/shenandoah-national-park/robertson-mountain",
       "notes": "Less traveled trail, quiet and peaceful. Good solitude hike.",
       "recommended": false,
-      "image": "trail_images/robertson_mountain.jpg"
+      "image": "images/trail_images/robertson_mountain.jpg"
     }
   ]
 }
