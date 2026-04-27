@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Philmont 2026 · Itinerary 9-6</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bark:     #1E1208;
+  --pine:     #1A3325;
+  --sage:     #4A6B52;
+  --wheat:    #C8A055;
+  --cream:    #F4EDD6;
+  --ember:    #BF4E28;
+  --sky:      #5A7E9E;
+  --stone:    #7A6B58;
+  --parchment:#E8D9B5;
+  --gold:     #D4A020;
+  --mist:     rgba(244,237,214,0.07);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bark);
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg,   transparent, transparent 48px, rgba(255,255,255,.025) 48px, rgba(255,255,255,.025) 49px),
+    repeating-linear-gradient(90deg,  transparent, transparent 80px, rgba(255,255,255,.012) 80px, rgba(255,255,255,.012) 81px);
+  pointer-events: none; z-index: 0;
+}
+
+.page { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 24px 80px; }
+
+/* ── QUICK LINKS NAV ── */
+.quick-links {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(30,18,8,.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(200,160,85,.2);
+  padding: 0 0 0;
+  margin: 0 -24px 40px;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.quick-links::-webkit-scrollbar { display: none; }
+.ql-inner {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0 24px;
+  flex-shrink: 0;
+}
+.ql-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 12px 16px 12px 0;
+  border-right: 1px solid rgba(200,160,85,.25);
+  margin-right: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.ql-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 12px 14px;
+  font-size: 12px;
+  color: rgba(244,237,214,.55);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+  flex-shrink: 0;
+}
+.ql-link:hover {
+  color: var(--cream);
+  border-bottom-color: var(--wheat);
+}
+.ql-link .ql-icon { font-size: 13px; }
+
+/* ── HERO ── */
+.hero {
+  padding: 36px 0 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: end;
+  border-bottom: 1px solid rgba(200,160,85,.25);
+  padding-bottom: 36px;
+  margin-bottom: 40px;
+  scroll-margin-top: 48px;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212,160,32,.15);
+  border: 1px solid rgba(212,160,32,.4);
+  border-radius: 4px;
+  padding: 5px 14px;
+  margin-bottom: 18px;
+}
+.hero-badge span {
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(46px, 7vw, 78px);
+  font-weight: 900;
+  line-height: .95;
+  color: var(--cream);
+}
+.hero h1 em {
+  color: var(--gold);
+  font-style: italic;
+  display: block;
+  font-size: clamp(28px, 4.5vw, 50px);
+  margin-top: 6px;
+}
+.hero-sub {
+  margin-top: 16px;
+  font-size: 15px;
+  color: rgba(244,237,214,.6);
+  max-width: 520px;
+  line-height: 1.7;
+}
+.hero-right { text-align: right; }
+.hero-stat-big {
+  font-family: 'Oswald', sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--wheat);
+}
+.hero-stat-big span { font-size: 32px; color: rgba(200,160,85,.6); }
+.hero-stat-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(244,237,214,.45);
+  margin-top: 4px;
+}
+
+/* ── PILL STATS ROW ── */
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 44px;
+}
+.stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.055);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 100px;
+  padding: 8px 18px;
+  font-size: 13px;
+}
+.stat-pill .icon { font-size: 16px; }
+.stat-pill .label { color: rgba(244,237,214,.5); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+.stat-pill .val { font-weight: 600; color: var(--cream); }
+
+/* ── SECTION HEADERS ── */
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+  scroll-margin-top: 48px;
+}
+.section-head h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--wheat);
+}
+.section-head::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(200,160,85,.35), transparent);
+}
+
+/* ── DAY TABLE ── */
+.day-grid { margin-bottom: 44px; }
+.day-row {
+  display: grid;
+  grid-template-columns: 48px 1fr 180px 130px;
+  gap: 0;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  transition: background .15s;
+}
+.day-row:hover { background: rgba(255,255,255,.035); }
+.day-row.header {
+  background: rgba(212,160,32,.12);
+  border-bottom: 1px solid rgba(212,160,32,.3);
+  border-radius: 6px 6px 0 0;
+}
+.day-row.header .cell {
+  font-family: 'Oswald', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 12px 16px;
+}
+.cell {
+  padding: 14px 16px;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.day-num {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: rgba(200,160,85,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.camp-name {
+  font-weight: 600;
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.camp-badge {
+  font-size: 9px;
+  background: rgba(90,126,158,.3);
+  border: 1px solid rgba(90,126,158,.4);
+  border-radius: 3px;
+  padding: 1px 5px;
+  color: #8BBBD8;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+}
+.camp-badge.trail { background: rgba(74,107,82,.3); border-color: rgba(74,107,82,.4); color: #8EC89A; }
+.camp-badge.dry   { background: rgba(191,78,40,.25); border-color: rgba(191,78,40,.4); color: #E09070; }
+.camp-badge.hq    { background: rgba(212,160,32,.2); border-color: rgba(212,160,32,.4); color: #D4A020; }
+.program-text { color: rgba(244,237,214,.72); font-size: 13px; }
+.program-text .special {
+  display: inline-block;
+  background: rgba(212,160,32,.15);
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 11px;
+  color: var(--gold);
+  margin: 2px 2px 2px 0;
+  font-weight: 500;
+}
+.miles-cell { color: rgba(244,237,214,.6); font-size: 13px; }
+.miles-num { font-weight: 600; color: var(--cream); font-size: 15px; }
+.elev-row { display: flex; gap: 8px; font-size: 12px; margin-top: 2px; }
+.gain { color: #7BC47F; }
+.loss { color: #E07070; }
+
+/* ── ELEVATION BAR CHART ── */
+.elev-chart { margin-bottom: 44px; }
+.elev-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 120px;
+  padding: 0 0 0 40px;
+  position: relative;
+}
+.elev-y {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.elev-y span { font-size: 10px; color: rgba(244,237,214,.35); }
+.elev-bar-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  height: 100%;
+}
+.elev-bar {
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+  background: linear-gradient(180deg, var(--wheat), rgba(200,160,85,.4));
+  transition: opacity .15s;
+}
+.elev-bar.special { background: linear-gradient(180deg, var(--ember), rgba(191,78,40,.4)); }
+.elev-bar:hover { opacity: .8; }
+.elev-bar-day { font-size: 10px; color: rgba(244,237,214,.45); }
+.elev-bar-mi  { font-size: 9px; color: rgba(244,237,214,.35); }
+
+/* ── HIGHLIGHTS GRID ── */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 44px;
+}
+.highlight-card {
+  background: linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.025));
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 10px;
+  padding: 22px 22px 20px;
+}
+.highlight-card .hc-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.highlight-card ul { list-style: none; }
+.highlight-card ul li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(244,237,214,.88);
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+.highlight-card ul li:last-child { border-bottom: none; }
+.highlight-card ul li::before { content: '▸'; color: var(--wheat); font-size: 10px; flex-shrink: 0; }
+
+/* ── PEAKS GRID ── */
+.peaks-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 44px;
+}
+.peak-card {
+  background: rgba(255,255,255,.045);
+  border: 1px solid rgba(255,255,255,.1);
+  border-top: 2px solid var(--wheat);
+  border-radius: 8px;
+  padding: 16px 14px;
+  text-align: center;
+}
+.peak-card.optional { border-top-color: rgba(200,160,85,.35); opacity: .8; }
+.peak-elev { font-family: 'Oswald', sans-serif; font-size: 26px; color: var(--wheat); line-height: 1; }
+.peak-elev small { font-size: 14px; color: rgba(200,160,85,.6); }
+.peak-name { font-size: 12px; color: rgba(244,237,214,.75); margin-top: 6px; font-weight: 500; }
+.peak-opt  { font-size: 10px; color: rgba(244,237,214,.4); margin-top: 2px; font-style: italic; }
+
+/* ── CONSERVATION ── */
+.conservation-band {
+  background: linear-gradient(90deg, rgba(74,107,82,.25), rgba(74,107,82,.1));
+  border: 1px solid rgba(74,107,82,.4);
+  border-left: 3px solid var(--sage);
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-bottom: 44px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+  align-items: center;
+}
+.cons-icon { font-size: 36px; }
+.cons-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8EC89A;
+  margin-bottom: 4px;
+}
+.cons-desc { font-size: 13.5px; color: rgba(244,237,214,.75); }
+.cons-badge {
+  background: rgba(74,107,82,.4);
+  border: 1px solid rgba(74,107,82,.6);
+  border-radius: 6px;
+  padding: 10px 16px;
+  text-align: center;
+}
+.cons-badge .cb-day { font-family: 'Oswald', sans-serif; font-size: 22px; color: #8EC89A; line-height: 1; }
+.cons-badge .cb-time { font-size: 11px; color: rgba(244,237,214,.5); margin-top: 2px; }
+
+/* ── NOTES GRID ── */
+.notes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 44px;
+}
+.note-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 8px;
+  padding: 18px 20px;
+  font-size: 13.5px;
+  color: rgba(244,237,214,.78);
+  line-height: 1.6;
+}
+.note-card strong {
+  display: block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--wheat);
+  margin-bottom: 8px;
+}
+
+/* ── FOOTER ── */
+.footer-ribbon {
+  background: rgba(212,160,32,.1);
+  border: 1px solid rgba(212,160,32,.25);
+  border-radius: 8px;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+  color: rgba(244,237,214,.55);
+}
+.footer-ribbon strong { color: var(--gold); }
+
+@media (max-width: 700px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { text-align: left; }
+  .highlights-grid { grid-template-columns: 1fr; }
+  .day-row { grid-template-columns: 40px 1fr; }
+  .day-row .cell:nth-child(3), .day-row .cell:nth-child(4) { display: none; }
+  .peaks-grid { grid-template-columns: 1fr 1fr; }
+  .notes-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- QUICK LINKS NAV -->
+  <nav class="quick-links" aria-label="Page sections">
+    <div class="ql-inner">
+      <div class="ql-label">Jump to</div>
+      <a class="ql-link" href="#section-overview"><span class="ql-icon">📋</span> Overview</a>
+      <a class="ql-link" href="#section-itinerary"><span class="ql-icon">🗓</span> Day-by-Day</a>
+      <a class="ql-link" href="#section-mileage"><span class="ql-icon">📏</span> Mileage</a>
+      <a class="ql-link" href="#section-highlights"><span class="ql-icon">⭐</span> Highlights</a>
+      <a class="ql-link" href="#section-peaks"><span class="ql-icon">⛰</span> Peaks</a>
+      <a class="ql-link" href="#section-conservation"><span class="ql-icon">🌲</span> Conservation</a>
+      <a class="ql-link" href="#section-logistics"><span class="ql-icon">🎒</span> Logistics</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="section-overview" class="hero">
+    <div class="hero-left">
+      <div class="hero-badge"><span>🏕 Philmont Scout Ranch · 2026</span></div>
+      <h1>Itinerary 9-6<em>South Country Summit Trek</em></h1>
+      <p class="hero-sub">A rugged 9-day journey through Philmont's South Country — living history, high mountain ranching, iconic peaks, and a triumphant hike into Base Camp over the Tooth of Time. Updated from 2025 itinerary 9-4.</p>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stat-big">46<span> mi</span></div>
+      <div class="hero-stat-label">Total Distance</div>
+    </div>
+  </header>
+
+  <!-- STATS PILLS -->
+  <div class="stats-row">
+    <div class="stat-pill"><span class="icon">⛰</span><div><div class="label">Difficulty</div><div class="val">Rugged</div></div></div>
+    <div class="stat-pill"><span class="icon">📅</span><div><div class="label">Duration</div><div class="val">9 Days</div></div></div>
+    <div class="stat-pill"><span class="icon">🏕</span><div><div class="label">Staffed Camps</div><div class="val">4</div></div></div>
+    <div class="stat-pill"><span class="icon">🌲</span><div><div class="label">Trail Camps</div><div class="val">3</div></div></div>
+    <div class="stat-pill"><span class="icon">💧</span><div><div class="label">Dry Camps</div><div class="val">1</div></div></div>
+    <div class="stat-pill"><span class="icon">📏</span><div><div class="label">Min Elevation</div><div class="val">7,214 ft</div></div></div>
+    <div class="stat-pill"><span class="icon">🏔</span><div><div class="label">Max Elevation</div><div class="val">10,403 ft</div></div></div>
+    <div class="stat-pill"><span class="icon">🗺</span><div><div class="label">Sectional Map</div><div class="val">South</div></div></div>
+    <div class="stat-pill"><span class="icon">🎣</span><div><div class="label">Fishing</div><div class="val">Possible (NM License)</div></div></div>
+    <div class="stat-pill"><span class="icon">🐴</span><div><div class="label">Horse Ride</div><div class="val">Day 5 @ Beaubien</div></div></div>
+  </div>
+
+  <!-- DAY-BY-DAY ITINERARY -->
+  <div id="section-itinerary" class="section-head"><h2>Day-by-Day Itinerary</h2></div>
+  <div class="day-grid">
+    <div class="day-row header">
+      <div class="cell">Day</div>
+      <div class="cell">Camp & Programs</div>
+      <div class="cell">Programs / Notes</div>
+      <div class="cell">Miles / Elevation</div>
+    </div>
+    <div class="day-row">
+      <div class="cell day-num">1</div>
+      <div class="cell">
+        <div class="camp-name">Camping HQ <span class="camp-badge hq">HQ</span></div>
+        <div class="program-text" style="margin-top:4px">Opening Campfire — Arrival &amp; crew orientation</div>
+      </div>
+      <div class="cell program-text">Welcome to Philmont!</div>
+      <div class="cell miles-cell">—</div>
+    </div>
+    <div class="day-row">
+      <div class="cell day-num">2</div>
+      <div class="cell">
+        <div class="camp-name">ABREU <span class="camp-badge">Staffed</span></div>
+        <div class="program-text" style="margin-top:4px">Ranger Training · Abreu Family Homestead Program · Cantina<br><span class="special">Food Pickup: Camping HQ</span><br><em style="font-size:11px;color:rgba(244,237,214,.4)">Bus to Zastrow Trailhead</em></div>
+      </div>
+      <div class="cell program-text">First staffed camp — immerse in NM homesteading history at the Abreu rancho</div>
+      <div class="cell miles-cell"><div class="miles-num">2.4 mi</div><div class="elev-row"><span class="gain">▲ 450'</span><span class="loss">▼ 160'</span></div></div>
+    </div>
+    <div class="day-row">
+      <div class="cell day-num">3</div>
+      <div class="cell">
+        <div class="camp-name">CRATER LAKE <span class="camp-badge">Staffed</span></div>
+        <div class="program-text" style="margin-top:4px">Continental Tie &amp; Lumber Company Program · Campfire Show</div>
+      </div>
+      <div class="cell program-text">Logging history comes alive — learn what it took to build railroads in the Rockies</div>
+      <div class="cell miles-cell"><div class="miles-num">5.8 mi</div><div class="elev-row"><span class="gain">▲ 3,000'</span><span class="loss">▼ 1,820'</span></div></div>
+    </div>
+    <div class="day-row">
+      <div class="cell day-num">4</div>
+      <div class="cell">
+        <div class="camp-name">BEAUBIEN <span class="camp-badge">Staffed</span> <span class="camp-badge" style="background:rgba(90,126,158,.2);color:#8BBBD8;border-color:rgba(90,126,158,.3)">Showers</span></div>
+        <div class="program-text" style="margin-top:4px">Trail Peak (optional) · High Mountain Ranching Program · <span class="special">Chuckwagon Dinner</span> · Campfire Show<br><em style="font-size:11px;color:rgba(244,237,214,.4)">m = mileage assumes no optional route taken</em></div>
+      </div>
+      <div class="cell program-text">One of Philmont's most beloved staffed camps. Showers available.</div>
+      <div class="cell miles-cell"><div class="miles-num">7.3 mi</div><div class="elev-row"><span class="gain">▲ 3,660'</span><span class="loss">▼ 2,710'</span></div></div>
+    </div>
+    <div class="day-row">
+      <div class="cell day-num">5</div>
+      <div class="cell">
+        <div class="camp-name">Porcupine <span class="camp-badge trail">Trail</span></div>
+        <div class="program-text" style="margin-top:4px"><span class="special">🐴 Horse Ride</span> (reserve in Logistics) · Passthrough Commissary &amp; Trading Post @ Phillips Junction<br><span class="special">Food Pickup: Phillips Junction</span></div>
+      </div>
+      <div class="cell program-text">Horse ride departs from Beaubien. Pick up your food resupply at Phillips Junction en route to Porcupine.</div>
+      <div class="cell miles-cell"><div class="miles-num">2.7 mi</div><div class="elev-row"><span class="gain">▲ 1,260'</span><span class="loss">▼ 1,410'</span></div></div>
+    </div>
+    <div class="day-row">
+      <div class="cell day-num">6</div>
+      <div class="cell">
+        <div class="camp-name">Red Hills <span class="camp-badge trail">Trail</span></div>
+        <div class="program-text" style="margin-top:4px">Passthrough Pioneer Homestead Program @ Crooked Creek</div>
+      </div>
+      <div class="cell program-text">Climb into high country — beautiful ridge walking with views. Passthrough homestead history at Crooked Creek.</div>
+      <div class="cell miles-cell"><div class="miles-num">6.2 mi</div><div class="elev-row"><span class="gain">▲ 3,700'</span><span class="loss">▼ 2,480'</span></div></div>
+    </div>
+    <div class="day-row">
+      <div class="cell day-num">7</div>
+      <div class="cell">
+        <div class="camp-name">BLACK MOUNTAIN <span class="camp-badge">Staffed</span></div>
+        <div class="program-text" style="margin-top:4px">Big Red · Comanche Pass · Black Mountain (optional) · <span class="special">Black Mountain Encampment Program</span><br><em style="font-size:11px;color:rgba(244,237,214,.4)">m = mileage assumes no optional route taken</em></div>
+      </div>
+      <div class="cell program-text">Summit Big Red (11,020 ft). Black Mountain Encampment brings 19th-century frontier life to vivid reality.</div>
+      <div class="cell miles-cell"><div class="miles-num">4.9 mi</div><div class="elev-row"><span class="gain">▲ 2,190'</span><span class="loss">▼ 3,490'</span></div></div>
+    </div>
+    <div class="day-row">
+      <div class="cell day-num">8</div>
+      <div class="cell">
+        <div class="camp-name">Shaefers Pass <span class="camp-badge dry">Dry Camp</span></div>
+        <div class="program-text" style="margin-top:4px"><span class="special">🌲 Conservation: Trail Building @ North Fork Urraca — 2:00 PM</span><br>Water available @ North Fork Urraca Creek</div>
+      </div>
+      <div class="cell program-text">Conservation day — build trail at North Fork Urraca. Dry camp: fill up at the creek before making camp.</div>
+      <div class="cell miles-cell"><div class="miles-num">6.0 mi</div><div class="elev-row"><span class="gain">▲ 3,140'</span><span class="loss">▼ 3,460'</span></div></div>
+    </div>
+    <div class="day-row" style="border-bottom:none;">
+      <div class="cell day-num" style="color:var(--gold)">9</div>
+      <div class="cell">
+        <div class="camp-name" style="color:var(--gold)">Camping HQ <span class="camp-badge hq">Finish</span></div>
+        <div class="program-text" style="margin-top:4px"><span class="special">🦷 Shaefers Peak</span> · <span class="special">⛰ Tooth of Time</span> · Hike Into Camping HQ · <span class="special">Closing Campfire</span></div>
+      </div>
+      <div class="cell program-text">The Grand Finale! Summit Shaefers Peak, then climb the iconic Tooth of Time (9,003 ft) and descend into Base Camp. <em>You Made It!</em></div>
+      <div class="cell miles-cell"><div class="miles-num" style="color:var(--gold)">10.1 mi</div><div class="elev-row"><span class="gain">▲ 3,670'</span><span class="loss">▼ 5,740'</span></div></div>
+    </div>
+  </div>
+
+  <!-- DAILY MILEAGE -->
+  <div id="section-mileage" class="section-head"><h2>Daily Mileage at a Glance</h2></div>
+  <div class="elev-chart">
+    <div class="elev-bars">
+      <div class="elev-y">
+        <span>10</span><span>7.5</span><span>5</span><span>2.5</span><span>0</span>
+      </div>
+      <div class="elev-bar-wrap"><div class="elev-bar" style="height:24%"></div><div class="elev-bar-day">2</div><div class="elev-bar-mi">2.4</div></div>
+      <div class="elev-bar-wrap"><div class="elev-bar" style="height:58%"></div><div class="elev-bar-day">3</div><div class="elev-bar-mi">5.8</div></div>
+      <div class="elev-bar-wrap"><div class="elev-bar" style="height:73%"></div><div class="elev-bar-day">4</div><div class="elev-bar-mi">7.3</div></div>
+      <div class="elev-bar-wrap"><div class="elev-bar" style="height:27%"></div><div class="elev-bar-day">5</div><div class="elev-bar-mi">2.7</div></div>
+      <div class="elev-bar-wrap"><div class="elev-bar" style="height:62%"></div><div class="elev-bar-day">6</div><div class="elev-bar-mi">6.2</div></div>
+      <div class="elev-bar-wrap"><div class="elev-bar" style="height:49%"></div><div class="elev-bar-day">7</div><div class="elev-bar-mi">4.9</div></div>
+      <div class="elev-bar-wrap"><div class="elev-bar" style="height:60%"></div><div class="elev-bar-day">8</div><div class="elev-bar-mi">6.0</div></div>
+      <div class="elev-bar-wrap"><div class="elev-bar special" style="height:100%"></div><div class="elev-bar-day" style="color:var(--gold)">9</div><div class="elev-bar-mi" style="color:rgba(212,160,32,.6)">10.1 🦷</div></div>
+    </div>
+    <div style="text-align:center;font-size:11px;color:rgba(244,237,214,.3);margin-top:8px;">Miles per day · Day 9 highlighted (Tooth of Time — longest day)</div>
+  </div>
+
+  <!-- TREK HIGHLIGHTS -->
+  <div id="section-highlights" class="section-head"><h2>Trek Highlights</h2></div>
+  <div class="highlights-grid">
+    <div class="highlight-card">
+      <div class="hc-label">🏔 Hiking & Scenic Highlights</div>
+      <ul>
+        <li>Tooth of Time — 9,003 ft (Day 9 finale)</li>
+        <li>Trail Peak — 10,250 ft (optional, Day 4)</li>
+        <li>Big Red Peak — 11,020 ft (Day 7)</li>
+        <li>Black Mountain — 10,889 ft (optional, Day 7)</li>
+        <li>Comanche Pass (Day 7)</li>
+        <li>Beaubien Meadow (Day 4)</li>
+        <li>Shaefers Peak en route to Base Camp</li>
+      </ul>
+    </div>
+    <div class="highlight-card">
+      <div class="hc-label">🎭 Program Highlights</div>
+      <ul>
+        <li>Abreu Family Homestead & Cantina</li>
+        <li>Continental Tie & Lumber Company</li>
+        <li>High Mountain Ranching (1870s)</li>
+        <li>Chuckwagon Dinner @ Beaubien</li>
+        <li>Black Mountain Encampment Program</li>
+        <li>Pioneer Homestead @ Crooked Creek</li>
+        <li>Western Lore (Branding & Roping)</li>
+      </ul>
+    </div>
+    <div class="highlight-card">
+      <div class="hc-label">🌄 What Makes 9-6 Special</div>
+      <ul>
+        <li>Best of South Country in 9 days</li>
+        <li>Four staffed camps — maximum program</li>
+        <li>Horse ride included (Day 5)</li>
+        <li>Summit 3+ iconic peaks</li>
+        <li>Ends with Tooth of Time — classic finale</li>
+        <li>Self-guided fishing opportunities (NM license)</li>
+        <li>Rugged but achievable for trained crews</li>
+      </ul>
+    </div>
+    <div class="highlight-card">
+      <div class="hc-label">⚠️ Important Notes</div>
+      <ul>
+        <li>Departs: Zastrow Trailhead (Day 2)</li>
+        <li>Returns: Hike back to Camping HQ (Day 9)</li>
+        <li>Day 8 is a dry camp — carry water from N. Fork Urraca</li>
+        <li>Horse rides require height/weight eligibility</li>
+        <li>Day 9 is longest — 10.1 miles with most elevation loss</li>
+        <li>Conservation Day 8 @ 2:00pm — plan accordingly</li>
+        <li>No changes to camps or pickups after selection</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PEAKS -->
+  <div id="section-peaks" class="section-head"><h2>Peak Summits</h2></div>
+  <div class="peaks-grid">
+    <div class="peak-card">
+      <div class="peak-elev">9,003<small> ft</small></div>
+      <div class="peak-name">Tooth of Time</div>
+      <div class="peak-opt">Day 9 — Iconic Finale</div>
+    </div>
+    <div class="peak-card">
+      <div class="peak-elev">11,020<small> ft</small></div>
+      <div class="peak-name">Big Red Peak</div>
+      <div class="peak-opt">Day 7</div>
+    </div>
+    <div class="peak-card optional">
+      <div class="peak-elev">10,250<small> ft</small></div>
+      <div class="peak-name">Trail Peak</div>
+      <div class="peak-opt">Day 4 — Optional</div>
+    </div>
+    <div class="peak-card optional">
+      <div class="peak-elev">10,889<small> ft</small></div>
+      <div class="peak-name">Black Mountain</div>
+      <div class="peak-opt">Day 7 — Optional</div>
+    </div>
+  </div>
+
+  <!-- CONSERVATION -->
+  <div id="section-conservation" class="section-head"><h2>Conservation Project</h2></div>
+  <div class="conservation-band">
+    <div class="cons-icon">🌲</div>
+    <div>
+      <div class="cons-title">North Fork Urraca — New Trail Construction</div>
+      <div class="cons-desc">Ascending out of the bottom of the North Fork Urraca Canyon, this new trail will eventually connect to Stockade Ridge Camp — providing unique views of the Tooth of Time ridge. Crews help build a trail through steep terrain, meadowy benches, and rocky canyons. Be prepared to hike up to a mile from the bottom to the construction site. A required part of your Arrowhead Award — your 3-hour contribution matters!</div>
+    </div>
+    <div class="cons-badge">
+      <div class="cb-day">Day 8</div>
+      <div class="cb-time">2:00 PM</div>
+    </div>
+  </div>
+
+  <!-- LOGISTICS -->
+  <div id="section-logistics" class="section-head"><h2>Logistics & Key Notes</h2></div>
+  <div class="notes-grid">
+    <div class="note-card"><strong>🚌 Transportation</strong>Bus provided from Camping HQ to <strong>Zastrow Trailhead</strong> on Day 2. Crew hikes back to Camping HQ on Day 9 via the Tooth of Time trail.</div>
+    <div class="note-card"><strong>🐴 Horse Ride</strong>Scheduled during Trip Planning in Logistics on Day 1. Horse rides depart from <strong>Beaubien</strong>. Strict height/weight requirements apply — see Horse Ride chart. Not available July 4th.</div>
+    <div class="note-card"><strong>🍽 Food Pickups</strong>Day 2: Camping HQ (initial issue). Day 5: <strong>Phillips Junction</strong> (passthrough resupply from Beaubien area). Plan your meals to bridge between pickups.</div>
+    <div class="note-card"><strong>💧 Water Sources</strong>Day 8 is a dry camp at Shaefers Pass. Water available at <strong>North Fork Urraca Creek</strong>. Fill up before reaching camp. All other camps have water access.</div>
+    <div class="note-card"><strong>🏕 Camp Types</strong>4 Staffed (ABREU, CRATER LAKE, BEAUBIEN, BLACK MOUNTAIN) — showers available at Beaubien. 3 Trail Camps (Porcupine, Red Hills + Shaefers Pass as dry camp).</div>
+    <div class="note-card"><strong>🎣 Fishing</strong>Self-guided fishing opportunities may be available on this itinerary. A valid <strong>New Mexico Fishing License</strong> is required. Bring personal gear.</div>
+    <div class="note-card"><strong>🏆 Awards Eligible</strong>All crews earn the <strong>Arrowhead Award</strong> upon completing the conservation project. 46 miles qualifies toward the <strong>50-Miler Award</strong> if combined with home-area conservation hours.</div>
+    <div class="note-card"><strong>⛰ Mileage Note</strong>46 miles is camp-to-camp only. Expect <strong>25–30% more</strong> actual hiking including side hikes to peaks, conservation sites, and program areas. Daily average ~5.75 mi.</div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-ribbon">
+    <div>Source: <strong>2026 Philmont Scout Ranch Itinerary Guidebook</strong> · Revised 12/17/2025</div>
+    <div>⚠️ Itinerary details may change — always verify final crew copy upon arrival at Philmont</div>
+    <div>philmontscoutranch.org</div>
+  </div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.ql-link').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href');
+      if (href && href.charAt(0) === '#') {
+        e.preventDefault();
+        var targetId = href.substring(1);
+        var target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
