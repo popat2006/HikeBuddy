@@ -1,0 +1,20 @@
+# Treat all images as binary to prevent git from modifying them
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.bmp binary
+*.tiff binary
+*.webp binary
+*.ico binary
+*.svg text
+
+# Prevent end-of-line conversion for binary files
+*.jpg -text
+*.jpeg -text
+*.png -text
+*.gif -text
+*.bmp -text
+*.tiff -text
+*.webp -text
+*.ico -text
