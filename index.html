@@ -6,6 +6,7 @@
     <title>HikeBuddy - Your Hiking Companion</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -47,6 +48,9 @@
             </button>
             <button class="tab-btn" data-tab="faq">
                 <i class="fas fa-question-circle"></i> FAQ
+            </button>
+            <button class="tab-btn" data-tab="troop51-philmont">
+                <i class="fas fa-users"></i> Troop51 Philmont
             </button>
         </div>
     </nav>
@@ -567,6 +571,546 @@
                 <div class="faq-item">
                     <h3><i class="fas fa-question-circle"></i> What do I do if I get lost?</h3>
                     <p>STOP: Stop, Think, Observe, Plan. Stay calm, don't panic. Use your map and compass, retrace your steps if possible, and signal for help if needed.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Troop51 Philmont Tab -->
+        <section id="troop51-philmont" class="tab-content">
+            <div class="subtab-nav">
+                <button class="subtab-btn active" data-subtab="crew">
+                    <i class="fas fa-user-friends"></i> Crew
+                </button>
+                <button class="subtab-btn" data-subtab="philmont-itinerary">
+                    <i class="fas fa-map"></i> Philmont Itinerary
+                </button>
+                <button class="subtab-btn" data-subtab="philmont-gear">
+                    <i class="fas fa-hiking"></i> Philmont Gear
+                </button>
+                <button class="subtab-btn" data-subtab="philmont-food">
+                    <i class="fas fa-utensils"></i> Philmont Food Planning
+                </button>
+            </div>
+
+            <!-- Crew Subtab -->
+            <div id="crew" class="subtab-content active">
+                <div class="tab-header-image">
+                    <img src="images/tab-philmont.jpg" alt="Troop 51 Philmont Crew">
+                    <div class="overlay">
+                        <h2>Troop 51 Philmont Crew</h2>
+                    </div>
+                </div>
+                <p class="lead">Meet the crew embarking on the Philmont adventure!</p>
+                <div class="content-block">
+                    <h3><i class="fas fa-users"></i> Crew Roster</h3>
+                    <p>Crew member details will be added here.</p>
+                </div>
+            </div>
+
+            <!-- Philmont Itinerary Subtab -->
+            <div id="philmont-itinerary" class="subtab-content">
+                <style>
+                    #philmont-itinerary {
+                        background: #1E1208;
+                        color: #F4EDD6;
+                        padding: 20px;
+                        border-radius: 10px;
+                    }
+                    #philmont-itinerary .page {
+                        max-width: 960px;
+                        margin: 0 auto;
+                    }
+                    /* Philmont Itinerary Styles - Scoped */
+                    #philmont-itinerary :root {
+                        --bark: #1E1208;
+                        --pine: #1A3325;
+                        --sage: #4A6B52;
+                        --wheat: #C8A055;
+                        --cream: #F4EDD6;
+                        --ember: #BF4E28;
+                        --sky: #5A7E9E;
+                        --stone: #7A6B58;
+                        --parchment: #E8D9B5;
+                        --gold: #D4A020;
+                        --mist: rgba(244,237,214,0.07);
+                    }
+                    #philmont-itinerary .hero {
+                        padding: 52px 0 0;
+                        display: grid;
+                        grid-template-columns: 1fr auto;
+                        gap: 24px;
+                        align-items: end;
+                        border-bottom: 1px solid rgba(200,160,85,.25);
+                        padding-bottom: 36px;
+                        margin-bottom: 40px;
+                    }
+                    #philmont-itinerary .hero-left {}
+                    #philmont-itinerary .hero-badge {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        background: rgba(212,160,32,.15);
+                        border: 1px solid rgba(212,160,32,.4);
+                        border-radius: 4px;
+                        padding: 5px 14px;
+                        margin-bottom: 18px;
+                    }
+                    #philmont-itinerary .hero-badge span {
+                        font-family: 'Oswald', sans-serif;
+                        font-size: 11px;
+                        letter-spacing: 3.5px;
+                        text-transform: uppercase;
+                        color: #D4A020;
+                    }
+                    #philmont-itinerary .hero h1 {
+                        font-family: 'Playfair Display', serif;
+                        font-size: clamp(46px, 7vw, 78px);
+                        font-weight: 900;
+                        line-height: .95;
+                        color: #F4EDD6;
+                        margin: 0;
+                    }
+                    #philmont-itinerary .hero h1 em {
+                        color: #D4A020;
+                        font-style: italic;
+                        display: block;
+                        font-size: clamp(28px, 4.5vw, 50px);
+                        margin-top: 6px;
+                    }
+                    #philmont-itinerary .hero-sub {
+                        margin-top: 16px;
+                        font-size: 15px;
+                        color: rgba(244,237,214,.6);
+                        max-width: 520px;
+                        line-height: 1.7;
+                    }
+                    #philmont-itinerary .hero-right { text-align: right; }
+                    #philmont-itinerary .hero-stat-big {
+                        font-family: 'Oswald', sans-serif;
+                        font-size: 72px;
+                        font-weight: 700;
+                        line-height: 1;
+                        color: #C8A055;
+                    }
+                    #philmont-itinerary .hero-stat-big span { font-size: 32px; color: rgba(200,160,85,.6); }
+                    #philmont-itinerary .hero-stat-label {
+                        font-size: 11px;
+                        letter-spacing: 3px;
+                        text-transform: uppercase;
+                        color: rgba(244,237,214,.45);
+                        margin-top: 4px;
+                    }
+                    #philmont-itinerary .stats-row {
+                        display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 44px;
+                    }
+                    #philmont-itinerary .stat-pill {
+                        display: flex; align-items: center; gap: 8px;
+                        background: rgba(255,255,255,.055);
+                        border: 1px solid rgba(255,255,255,.1);
+                        border-radius: 100px; padding: 8px 18px; font-size: 13px;
+                    }
+                    #philmont-itinerary .stat-pill .icon { font-size: 16px; }
+                    #philmont-itinerary .stat-pill .label { color: rgba(244,237,214,.5); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+                    #philmont-itinerary .stat-pill .val { font-weight: 600; color: #F4EDD6; }
+                    #philmont-itinerary .section-head {
+                        display: flex; align-items: center; gap: 14px; margin-bottom: 22px;
+                    }
+                    #philmont-itinerary .section-head h2 {
+                        font-family: 'Oswald', sans-serif; font-size: 12px;
+                        letter-spacing: 4px; text-transform: uppercase; color: #C8A055;
+                    }
+                    #philmont-itinerary .section-head::after {
+                        content: ''; flex: 1; height: 1px;
+                        background: linear-gradient(90deg, rgba(200,160,85,.35), transparent);
+                    }
+                    #philmont-itinerary .highlights-grid {
+                        display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 44px;
+                    }
+                    #philmont-itinerary .highlight-card {
+                        background: linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.025));
+                        border: 1px solid rgba(255,255,255,.1); border-radius: 10px;
+                        padding: 22px 22px 20px;
+                    }
+                    #philmont-itinerary .highlight-card .hc-label {
+                        font-family: 'Oswald', sans-serif; font-size: 10px;
+                        letter-spacing: 3px; text-transform: uppercase; color: #D4A020; margin-bottom: 14px;
+                    }
+                    #philmont-itinerary .highlight-card ul { list-style: none; padding: 0; }
+                    #philmont-itinerary .highlight-card ul li {
+                        display: flex; align-items: baseline; gap: 10px;
+                        font-size: 14px; color: rgba(244,237,214,.88);
+                        padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.05);
+                    }
+                    #philmont-itinerary .highlight-card ul li:last-child { border-bottom: none; }
+                    #philmont-itinerary .highlight-card ul li::before {
+                        content: '▸'; color: #C8A055; font-size: 10px; flex-shrink: 0;
+                    }
+                    #philmont-itinerary .day-grid { margin-bottom: 44px; }
+                    #philmont-itinerary .day-row {
+                        display: grid; grid-template-columns: 48px 1fr 180px 130px; gap: 0;
+                        border-bottom: 1px solid rgba(255,255,255,.07); transition: background .15s;
+                    }
+                    #philmont-itinerary .day-row:hover { background: rgba(255,255,255,.035); }
+                    #philmont-itinerary .day-row.header {
+                        background: rgba(212,160,32,.12); border-bottom: 1px solid rgba(212,160,32,.3);
+                        border-radius: 6px 6px 0 0;
+                    }
+                    #philmont-itinerary .day-row.header .cell {
+                        font-family: 'Oswald', sans-serif; font-size: 10px;
+                        letter-spacing: 3px; text-transform: uppercase; color: #D4A020; padding: 12px 16px;
+                    }
+                    #philmont-itinerary .cell { padding: 14px 16px; font-size: 13.5px; line-height: 1.5; vertical-align: top; }
+                    #philmont-itinerary .day-num {
+                        font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 20px;
+                        color: rgba(200,160,85,.5); display: flex; align-items: center; justify-content: center;
+                    }
+                    #philmont-itinerary .camp-name {
+                        font-weight: 600; color: #F4EDD6; display: flex; align-items: center; gap: 6px;
+                    }
+                    #philmont-itinerary .camp-badge {
+                        font-size: 9px; background: rgba(90,126,158,.3); border: 1px solid rgba(90,126,158,.4);
+                        border-radius: 3px; padding: 1px 5px; color: #8BBBD8;
+                        letter-spacing: 1px; text-transform: uppercase; font-family: 'DM Sans', sans-serif; font-weight: 500;
+                    }
+                    #philmont-itinerary .camp-badge.trail { background: rgba(74,107,82,.3); border-color: rgba(74,107,82,.4); color: #8EC89A; }
+                    #philmont-itinerary .camp-badge.dry   { background: rgba(191,78,40,.25); border-color: rgba(191,78,40,.4); color: #E09070; }
+                    #philmont-itinerary .camp-badge.hq    { background: rgba(212,160,32,.2); border-color: rgba(212,160,32,.4); color: #D4A020; }
+                    #philmont-itinerary .program-text { color: rgba(244,237,214,.72); font-size: 13px; }
+                    #philmont-itinerary .program-text .special {
+                        display: inline-block; background: rgba(212,160,32,.15); border-radius: 3px;
+                        padding: 1px 6px; font-size: 11px; color: #D4A020; margin: 2px 2px 2px 0; font-weight: 500;
+                    }
+                    #philmont-itinerary .miles-cell { color: rgba(244,237,214,.6); font-size: 13px; }
+                    #philmont-itinerary .miles-num { font-weight: 600; color: #F4EDD6; font-size: 15px; }
+                    #philmont-itinerary .elev-row { display: flex; gap: 8px; font-size: 12px; margin-top: 2px; }
+                    #philmont-itinerary .gain { color: #7BC47F; }
+                    #philmont-itinerary .loss { color: #E07070; }
+                    #philmont-itinerary .conservation-band {
+                        background: linear-gradient(90deg, rgba(74,107,82,.25), rgba(74,107,82,.1));
+                        border: 1px solid rgba(74,107,82,.4); border-left: 3px solid #4A6B52;
+                        border-radius: 8px; padding: 18px 22px; margin-bottom: 44px;
+                        display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center;
+                    }
+                    #philmont-itinerary .cons-icon { font-size: 36px; }
+                    #philmont-itinerary .cons-title {
+                        font-family: 'Oswald', sans-serif; font-size: 13px; letter-spacing: 2px;
+                        text-transform: uppercase; color: #8EC89A; margin-bottom: 4px;
+                    }
+                    #philmont-itinerary .cons-desc { font-size: 13.5px; color: rgba(244,237,214,.75); }
+                    #philmont-itinerary .cons-badge {
+                        background: rgba(74,107,82,.4); border: 1px solid rgba(74,107,82,.6);
+                        border-radius: 6px; padding: 10px 16px; text-align: center;
+                    }
+                    #philmont-itinerary .cons-badge .cb-day { font-family: 'Oswald', sans-serif; font-size: 22px; color: #8EC89A; line-height: 1; }
+                    #philmont-itinerary .cons-badge .cb-time { font-size: 11px; color: rgba(244,237,214,.5); margin-top: 2px; }
+                    #philmont-itinerary .peaks-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 44px; }
+                    #philmont-itinerary .peak-card {
+                        background: rgba(255,255,255,.045); border: 1px solid rgba(255,255,255,.1);
+                        border-top: 2px solid #C8A055; border-radius: 8px; padding: 16px 14px; text-align: center;
+                    }
+                    #philmont-itinerary .peak-card.optional { border-top-color: rgba(200,160,85,.35); opacity: .8; }
+                    #philmont-itinerary .peak-elev { font-family: 'Oswald', sans-serif; font-size: 26px; color: #C8A055; line-height: 1; }
+                    #philmont-itinerary .peak-elev small { font-size: 14px; color: rgba(200,160,85,.6); }
+                    #philmont-itinerary .peak-name { font-size: 12px; color: rgba(244,237,214,.75); margin-top: 6px; font-weight: 500; }
+                    #philmont-itinerary .peak-opt { font-size: 10px; color: rgba(244,237,214,.4); margin-top: 2px; font-style: italic; }
+                    #philmont-itinerary .notes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 44px; }
+                    #philmont-itinerary .note-card {
+                        background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.09);
+                        border-radius: 8px; padding: 18px 20px; font-size: 13.5px;
+                        color: rgba(244,237,214,.78); line-height: 1.6;
+                    }
+                    #philmont-itinerary .note-card strong {
+                        display: block; font-family: 'Oswald', sans-serif; font-size: 10px;
+                        letter-spacing: 3px; text-transform: uppercase; color: #C8A055; margin-bottom: 8px;
+                    }
+                    #philmont-itinerary .elev-chart { margin-bottom: 44px; }
+                    #philmont-itinerary .elev-bars { display: flex; align-items: flex-end; gap: 6px; height: 120px; padding: 0 0 0 40px; position: relative; }
+                    #philmont-itinerary .elev-y { position: absolute; left: 0; top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: space-between; }
+                    #philmont-itinerary .elev-y span { font-size: 10px; color: rgba(244,237,214,.35); }
+                    #philmont-itinerary .elev-bar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 4px; height: 100%; }
+                    #philmont-itinerary .elev-bar { width: 100%; border-radius: 3px 3px 0 0; background: linear-gradient(180deg, #C8A055, rgba(200,160,85,.4)); position: relative; cursor: default; transition: opacity .15s; }
+                    #philmont-itinerary .elev-bar.special { background: linear-gradient(180deg, #BF4E28, rgba(191,78,40,.4)); }
+                    #philmont-itinerary .elev-bar:hover { opacity: .8; }
+                    #philmont-itinerary .elev-bar-day { font-size: 10px; color: rgba(244,237,214,.45); }
+                    #philmont-itinerary .elev-bar-mi { font-size: 9px; color: rgba(244,237,214,.35); }
+                    #philmont-itinerary .footer-ribbon {
+                        background: rgba(212,160,32,.1); border: 1px solid rgba(212,160,32,.25);
+                        border-radius: 8px; padding: 16px 24px; display: flex;
+                        justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+                        font-size: 12px; color: rgba(244,237,214,.55);
+                    }
+                    #philmont-itinerary .footer-ribbon strong { color: #D4A020; }
+                    @media (max-width: 700px) {
+                        #philmont-itinerary .hero { grid-template-columns: 1fr; }
+                        #philmont-itinerary .hero-right { text-align: left; }
+                        #philmont-itinerary .highlights-grid { grid-template-columns: 1fr; }
+                        #philmont-itinerary .day-row { grid-template-columns: 40px 1fr; }
+                        #philmont-itinerary .day-row .cell:nth-child(3), #philmont-itinerary .day-row .cell:nth-child(4) { display: none; }
+                        #philmont-itinerary .peaks-grid { grid-template-columns: 1fr 1fr; }
+                        #philmont-itinerary .notes-grid { grid-template-columns: 1fr; }
+                    }
+                </style>
+                <div class="page">
+                    <header class="hero">
+                        <div class="hero-left">
+                            <div class="hero-badge"><span>🏕 Philmont Scout Ranch · 2026</span></div>
+                            <h1>Itinerary 9-6<br><em>South Country Summit Trek</em></h1>
+                            <p class="hero-sub">A rugged 9-day journey through Philmont's South Country — living history, high mountain ranching, iconic peaks, and a triumphant hike into Base Camp over the Tooth of Time.</p>
+                        </div>
+                        <div class="hero-right">
+                            <div class="hero-stat-big">46<span> mi</span></div>
+                            <div class="hero-stat-label">Total Distance</div>
+                        </div>
+                    </header>
+                    <div class="stats-row">
+                        <div class="stat-pill"><span class="icon">⛰</span><div><div class="label">Difficulty</div><div class="val">Rugged</div></div></div>
+                        <div class="stat-pill"><span class="icon">📅</span><div><div class="label">Duration</div><div class="val">9 Days</div></div></div>
+                        <div class="stat-pill"><span class="icon">🏕</span><div><div class="label">Staffed Camps</div><div class="val">4</div></div></div>
+                        <div class="stat-pill"><span class="icon">🌲</span><div><div class="label">Trail Camps</div><div class="val">3</div></div></div>
+                        <div class="stat-pill"><span class="icon">💧</span><div><div class="label">Dry Camps</div><div class="val">1</div></div></div>
+                        <div class="stat-pill"><span class="icon">📏</span><div><div class="label">Min Elevation</div><div class="val">7,214 ft</div></div></div>
+                        <div class="stat-pill"><span class="icon">🏔</span><div><div class="label">Max Elevation</div><div class="val">10,403 ft</div></div></div>
+                        <div class="stat-pill"><span class="icon">🗺</span><div><div class="label">Sectional Map</div><div class="val">South</div></div></div>
+                        <div class="stat-pill"><span class="icon">🎣</span><div><div class="label">Fishing</div><div class="val">Possible (NM License)</div></div></div>
+                        <div class="stat-pill"><span class="icon">🐴</span><div><div class="label">Horse Ride</div><div class="val">Day 5 @ Beaubien</div></div></div>
+                    </div>
+                    <div class="section-head"><h2>Trek Highlights</h2></div>
+                    <div class="highlights-grid">
+                        <div class="highlight-card">
+                            <div class="hc-label">🏔 Hiking & Scenic Highlights</div>
+                            <ul>
+                                <li>Tooth of Time — 9,003 ft (Day 9 finale)</li>
+                                <li>Trail Peak — 10,250 ft (optional, Day 4)</li>
+                                <li>Big Red Peak — 11,020 ft (Day 7)</li>
+                                <li>Black Mountain — 10,889 ft (optional, Day 7)</li>
+                                <li>Comanche Pass (Day 7)</li>
+                                <li>Beaubien Meadow (Day 4)</li>
+                                <li>Shaefers Peak en route to Base Camp</li>
+                            </ul>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="hc-label">🎭 Program Highlights</div>
+                            <ul>
+                                <li>Abreu Family Homestead & Cantina</li>
+                                <li>Continental Tie & Lumber Company</li>
+                                <li>High Mountain Ranching (1870s)</li>
+                                <li>Chuckwagon Dinner @ Beaubien</li>
+                                <li>Black Mountain Encampment Program</li>
+                                <li>Pioneer Homestead @ Crooked Creek</li>
+                                <li>Western Lore (Branding & Roping)</li>
+                            </ul>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="hc-label">🌄 What Makes 9-6 Special</div>
+                            <ul>
+                                <li>Best of South Country in 9 days</li>
+                                <li>Four staffed camps — maximum program</li>
+                                <li>Horse ride included (Day 5)</li>
+                                <li>Summit 3+ iconic peaks</li>
+                                <li>Ends with Tooth of Time — classic finale</li>
+                                <li>Self-guided fishing opportunities (NM license)</li>
+                                <li>Rugged but achievable for trained crews</li>
+                            </ul>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="hc-label">⚠️ Important Notes</div>
+                            <ul>
+                                <li>Departs: Zastrow Trailhead (Day 2)</li>
+                                <li>Returns: Hike back to Camping HQ (Day 9)</li>
+                                <li>Day 8 is a dry camp — carry water from N. Fork Urraca</li>
+                                <li>Horse rides require height/weight eligibility</li>
+                                <li>Day 9 is longest — 10.1 miles with most elevation loss</li>
+                                <li>Conservation Day 8 @ 2:00pm — plan accordingly</li>
+                                <li>No changes to camps or pickups after selection</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section-head"><h2>Peak Summits</h2></div>
+                    <div class="peaks-grid">
+                        <div class="peak-card">
+                            <div class="peak-elev">9,003<small> ft</small></div>
+                            <div class="peak-name">Tooth of Time</div>
+                            <div class="peak-opt">Day 9 — Iconic Finale</div>
+                        </div>
+                        <div class="peak-card">
+                            <div class="peak-elev">11,020<small> ft</small></div>
+                            <div class="peak-name">Big Red Peak</div>
+                            <div class="peak-opt">Day 7</div>
+                        </div>
+                        <div class="peak-card optional">
+                            <div class="peak-elev">10,250<small> ft</small></div>
+                            <div class="peak-name">Trail Peak</div>
+                            <div class="peak-opt">Day 4 — Optional</div>
+                        </div>
+                        <div class="peak-card optional">
+                            <div class="peak-elev">10,889<small> ft</small></div>
+                            <div class="peak-name">Black Mountain</div>
+                            <div class="peak-opt">Day 7 — Optional</div>
+                        </div>
+                    </div>
+                    <div class="section-head"><h2>Conservation Project</h2></div>
+                    <div class="conservation-band">
+                        <div class="cons-icon">🌲</div>
+                        <div>
+                            <div class="cons-title">North Fork Urraca — New Trail Construction</div>
+                            <div class="cons-desc">Ascending out of the bottom of the North Fork Urraca Canyon, this new trail will eventually connect to Stockade Ridge Camp — providing unique views of the Tooth of Time ridge. Crews help build a trail through steep terrain, meadowy benches, and rocky canyons. Be prepared to hike up to a mile from the bottom to the construction site. A required part of your Arrowhead Award — your 3-hour contribution matters!</div>
+                        </div>
+                        <div class="cons-badge">
+                            <div class="cb-day">Day 8</div>
+                            <div class="cb-time">2:00 PM</div>
+                        </div>
+                    </div>
+                    <div class="section-head"><h2>Day-by-Day Itinerary</h2></div>
+                    <div class="day-grid">
+                        <div class="day-row header">
+                            <div class="cell">Day</div>
+                            <div class="cell">Camp & Programs</div>
+                            <div class="cell">Programs / Notes</div>
+                            <div class="cell">Miles / Elevation</div>
+                        </div>
+                        <div class="day-row">
+                            <div class="cell day-num">1</div>
+                            <div class="cell">
+                                <div class="camp-name">Camping HQ <span class="camp-badge hq">HQ</span></div>
+                                <div class="program-text" style="margin-top:4px">Opening Campfire — Arrival &amp; crew orientation</div>
+                            </div>
+                            <div class="cell program-text">Welcome to Philmont!</div>
+                            <div class="cell miles-cell">—</div>
+                        </div>
+                        <div class="day-row">
+                            <div class="cell day-num">2</div>
+                            <div class="cell">
+                                <div class="camp-name">ABREU <span class="camp-badge">Staffed</span></div>
+                                <div class="program-text" style="margin-top:4px">Ranger Training · Abreu Family Homestead Program · Cantina<br><span class="special">Food Pickup: Camping HQ</span><br><em style="font-size:11px;color:rgba(244,237,214,.4)">Bus to Zastrow Trailhead</em></div>
+                            </div>
+                            <div class="cell program-text">First staffed camp — immerse in NM homesteading history at the Abreu rancho</div>
+                            <div class="cell miles-cell"><div class="miles-num">2.4 mi</div><div class="elev-row"><span class="gain">▲ 450'</span><span class="loss">▼ 160'</span></div></div>
+                        </div>
+                        <div class="day-row">
+                            <div class="cell day-num">3</div>
+                            <div class="cell">
+                                <div class="camp-name">CRATER LAKE <span class="camp-badge">Staffed</span></div>
+                                <div class="program-text" style="margin-top:4px">Continental Tie &amp; Lumber Company Program · Campfire Show</div>
+                            </div>
+                            <div class="cell program-text">Logging history comes alive — learn what it took to build railroads in the Rockies</div>
+                            <div class="cell miles-cell"><div class="miles-num">5.8 mi</div><div class="elev-row"><span class="gain">▲ 3,000'</span><span class="loss">▼ 1,820'</span></div></div>
+                        </div>
+                        <div class="day-row">
+                            <div class="cell day-num">4</div>
+                            <div class="cell">
+                                <div class="camp-name">BEAUBIEN <span class="camp-badge">Staffed</span> <span class="camp-badge" style="background:rgba(90,126,158,.2);color:#8BBBD8;border-color:rgba(90,126,158,.3)">Showers</span></div>
+                                <div class="program-text" style="margin-top:4px">Trail Peak (optional) · High Mountain Ranching Program · <span class="special">Chuckwagon Dinner</span> · Campfire Show<br><em style="font-size:11px;color:rgba(244,237,214,.4)">m = mileage assumes no optional route taken</em></div>
+                            </div>
+                            <div class="cell program-text">One of Philmont's most beloved staffed camps. Showers available. Big elevation day to get here!</div>
+                            <div class="cell miles-cell"><div class="miles-num">7.3 mi</div><div class="elev-row"><span class="gain">▲ 3,660'</span><span class="loss">▼ 2,710'</span></div></div>
+                        </div>
+                        <div class="day-row">
+                            <div class="cell day-num">5</div>
+                            <div class="cell">
+                                <div class="camp-name">Porcupine <span class="camp-badge trail">Trail</span></div>
+                                <div class="program-text" style="margin-top:4px"><span class="special">🐴 Horse Ride</span> (reserve in Logistics) · Passthrough Commissary &amp; Trading Post @ Phillips Junction<br><span class="special">Food Pickup: Phillips Junction</span></div>
+                            </div>
+                            <div class="cell program-text">Horse ride departs from Beaubien. Pick up your food resupply at Phillips Junction en route to Porcupine.</div>
+                            <div class="cell miles-cell"><div class="miles-num">2.7 mi</div><div class="elev-row"><span class="gain">▲ 1,260'</span><span class="loss">▼ 1,410'</span></div></div>
+                        </div>
+                        <div class="day-row">
+                            <div class="cell day-num">6</div>
+                            <div class="cell">
+                                <div class="camp-name">Red Hills <span class="camp-badge trail">Trail</span></div>
+                                <div class="program-text" style="margin-top:4px">Passthrough Pioneer Homestead Program @ Crooked Creek</div>
+                            </div>
+                            <div class="cell program-text">Climb into high country — beautiful ridge walking with views. Passthrough homestead history at Crooked Creek.</div>
+                            <div class="cell miles-cell"><div class="miles-num">6.2 mi</div><div class="elev-row"><span class="gain">▲ 3,700'</span><span class="loss">▼ 2,480'</span></div></div>
+                        </div>
+                        <div class="day-row">
+                            <div class="cell day-num">7</div>
+                            <div class="cell">
+                                <div class="camp-name">BLACK MOUNTAIN <span class="camp-badge">Staffed</span></div>
+                                <div class="program-text" style="margin-top:4px">Big Red · Comanche Pass · Black Mountain (optional) · <span class="special">Black Mountain Encampment Program</span><br><em style="font-size:11px;color:rgba(244,237,214,.4)">m = mileage assumes no optional route taken</em></div>
+                            </div>
+                            <div class="cell program-text">Summit Big Red (11,020 ft). Black Mountain Encampment brings 19th-century frontier life to vivid reality.</div>
+                            <div class="cell miles-cell"><div class="miles-num">4.9 mi</div><div class="elev-row"><span class="gain">▲ 2,190'</span><span class="loss">▼ 3,490'</span></div></div>
+                        </div>
+                        <div class="day-row">
+                            <div class="cell day-num">8</div>
+                            <div class="cell">
+                                <div class="camp-name">Shaefers Pass <span class="camp-badge dry">Dry Camp</span></div>
+                                <div class="program-text" style="margin-top:4px"><span class="special">🌲 Conservation: Trail Building @ North Fork Urraca — 2:00 PM</span><br>Water available @ North Fork Urraca Creek</div>
+                            </div>
+                            <div class="cell program-text">Conservation day — build trail at North Fork Urraca. Dry camp: fill up at the creek before making camp.</div>
+                            <div class="cell miles-cell"><div class="miles-num">6.0 mi</div><div class="elev-row"><span class="gain">▲ 3,140'</span><span class="loss">▼ 3,460'</span></div></div>
+                        </div>
+                        <div class="day-row" style="border-bottom:none;">
+                            <div class="cell day-num" style="color:#D4A020">9</div>
+                            <div class="cell">
+                                <div class="camp-name" style="color:#D4A020">Camping HQ <span class="camp-badge hq">Finish</span></div>
+                                <div class="program-text" style="margin-top:4px"><span class="special">🦷 Shaefers Peak</span> · <span class="special">⛰ Tooth of Time</span> · Hike Into Camping Headquarters · <span class="special">Closing Campfire</span></div>
+                            </div>
+                            <div class="cell program-text">The Grand Finale! Summit Shaefers Peak, then climb the iconic Tooth of Time (9,003 ft) and descend into Base Camp. <em>You Made It!</em></div>
+                            <div class="cell miles-cell"><div class="miles-num" style="color:#D4A020">10.1 mi</div><div class="elev-row"><span class="gain">▲ 3,670'</span><span class="loss">▼ 5,740'</span></div></div>
+                        </div>
+                    </div>
+                    <div class="section-head"><h2>Daily Mileage at a Glance</h2></div>
+                    <div class="elev-chart">
+                        <div class="elev-bars">
+                            <div class="elev-y"><span>10</span><span>7.5</span><span>5</span><span>2.5</span><span>0</span></div>
+                            <div class="elev-bar-wrap"><div class="elev-bar" style="height:24%"></div><div class="elev-bar-day">2</div><div class="elev-bar-mi">2.4</div></div>
+                            <div class="elev-bar-wrap"><div class="elev-bar" style="height:58%"></div><div class="elev-bar-day">3</div><div class="elev-bar-mi">5.8</div></div>
+                            <div class="elev-bar-wrap"><div class="elev-bar" style="height:73%"></div><div class="elev-bar-day">4</div><div class="elev-bar-mi">7.3</div></div>
+                            <div class="elev-bar-wrap"><div class="elev-bar" style="height:27%"></div><div class="elev-bar-day">5</div><div class="elev-bar-mi">2.7</div></div>
+                            <div class="elev-bar-wrap"><div class="elev-bar" style="height:62%"></div><div class="elev-bar-day">6</div><div class="elev-bar-mi">6.2</div></div>
+                            <div class="elev-bar-wrap"><div class="elev-bar" style="height:49%"></div><div class="elev-bar-day">7</div><div class="elev-bar-mi">4.9</div></div>
+                            <div class="elev-bar-wrap"><div class="elev-bar" style="height:60%"></div><div class="elev-bar-day">8</div><div class="elev-bar-mi">6.0</div></div>
+                            <div class="elev-bar-wrap"><div class="elev-bar special" style="height:100%"></div><div class="elev-bar-day" style="color:#D4A020">9</div><div class="elev-bar-mi" style="color:rgba(212,160,32,.6)">10.1 🦷</div></div>
+                        </div>
+                        <div style="text-align:center;font-size:11px;color:rgba(244,237,214,.3);margin-top:8px;">Miles per day · Day 9 highlighted (Tooth of Time — longest day)</div>
+                    </div>
+                    <div class="section-head"><h2>Logistics & Key Notes</h2></div>
+                    <div class="notes-grid">
+                        <div class="note-card"><strong>🚌 Transportation</strong>Bus provided from Camping HQ to <strong>Zastrow Trailhead</strong> on Day 2. Crew hikes back to Camping HQ on Day 9 via the Tooth of Time trail.</div>
+                        <div class="note-card"><strong>🐴 Horse Ride</strong>Scheduled during Trip Planning in Logistics on Day 1. Horse rides depart from <strong>Beaubien</strong>. Strict height/weight requirements apply — see Horse Ride chart. Not available July 4th.</div>
+                        <div class="note-card"><strong>🍽 Food Pickups</strong>Day 2: Camping HQ (initial issue). Day 5: <strong>Phillips Junction</strong> (passthrough resupply from Beaubien area). Plan your meals to bridge between pickups.</div>
+                        <div class="note-card"><strong>💧 Water Sources</strong>Day 8 is a dry camp at Shaefers Pass. Water available at <strong>North Fork Urraca Creek</strong>. Fill up before reaching camp. All other camps have water access.</div>
+                        <div class="note-card"><strong>🏕 Camp Types</strong>4 Staffed (ABREU, CRATER LAKE, BEAUBIEN, BLACK MOUNTAIN) — showers available at Beaubien. 3 Trail Camps (Porcupine, Red Hills + Shaefers Pass as dry camp).</div>
+                        <div class="note-card"><strong>🎣 Fishing</strong>Self-guided fishing opportunities may be available on this itinerary. A valid <strong>New Mexico Fishing License</strong> is required. Bring personal gear.</div>
+                        <div class="note-card"><strong>🏆 Awards Eligible</strong>All crews earn the <strong>Arrowhead Award</strong> upon completing the conservation project. 46 miles qualifies toward the <strong>50-Miler Award</strong> if combined with home-area conservation hours.</div>
+                        <div class="note-card"><strong>⛰ Mileage Note</strong>46 miles is camp-to-camp only. Expect <strong>25–30% more</strong> actual hiking including side hikes to peaks, conservation sites, and program areas. Daily average ~5.75 mi.</div>
+                    </div>
+                    <div class="footer-ribbon">
+                        <div>Source: <strong>2026 Philmont Scout Ranch Itinerary Guidebook</strong> · Revised 12/17/2025</div>
+                        <div>⚠️ Itinerary details may change — always verify final crew copy upon arrival at Philmont</div>
+                        <div>philmontscoutranch.org</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Philmont Gear Subtab -->
+            <div id="philmont-gear" class="subtab-content">
+                <div class="tab-header-image">
+                    <img src="images/tab-gear.jpg" alt="Philmont Gear">
+                    <div class="overlay">
+                        <h2>Philmont Gear</h2>
+                    </div>
+                </div>
+                <p class="lead">Essential gear checklist for your Philmont trek.</p>
+                <div class="content-block">
+                    <h3><i class="fas fa-backpack"></i> Gear List</h3>
+                    <p>Philmont gear recommendations will be added here.</p>
+                </div>
+            </div>
+
+            <!-- Philmont Food Planning Subtab -->
+            <div id="philmont-food" class="subtab-content">
+                <div class="tab-header-image">
+                    <img src="images/tab-food.jpg" alt="Philmont Food Planning">
+                    <div class="overlay">
+                        <h2>Philmont Food Planning</h2>
+                    </div>
+                </div>
+                <p class="lead">Plan your crew's meals for the trek.</p>
+                <div class="content-block">
+                    <h3><i class="fas fa-utensils"></i> Food Planning</h3>
+                    <p>Food planning details will be added here.</p>
                 </div>
             </div>
         </section>

@@ -35,6 +35,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Function to switch subtabs
+    function switchSubtab(subtabName, parentTab) {
+        const parent = parentTab || document.querySelector('.tab-content.active');
+        if (!parent) return;
+
+        // Remove active class from subtab buttons and contents within parent
+        parent.querySelectorAll('.subtab-btn').forEach(btn => btn.classList.remove('active'));
+        parent.querySelectorAll('.subtab-content').forEach(content => content.classList.remove('active'));
+
+        // Add active class to clicked subtab button
+        const activeSubBtn = parent.querySelector(`.subtab-btn[data-subtab="${subtabName}"]`);
+        if (activeSubBtn) {
+            activeSubBtn.classList.add('active');
+        }
+
+        // Show corresponding subtab content
+        const activeSubContent = parent.querySelector(`#${subtabName}`);
+        if (activeSubContent) {
+            activeSubContent.classList.add('active');
+        }
+    }
+
+    // Add click event listeners to all subtab buttons
+    document.querySelectorAll('.subtab-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const subtabName = this.getAttribute('data-subtab');
+            const parentTab = this.closest('.tab-content');
+            switchSubtab(subtabName, parentTab);
+        });
+    });
+
     // Check URL hash on page load for direct linking
     function checkHash() {
         const hash = window.location.hash.substring(1);

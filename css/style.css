@@ -264,6 +264,56 @@ main {
     min-height: calc(100vh - 300px);
 }
 
+/* Subtab Navigation */
+.subtab-nav {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0;
+    overflow-x: auto;
+}
+
+.subtab-btn {
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #666;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: inherit;
+}
+
+.subtab-btn:hover {
+    color: #4a7c59;
+    background-color: #f0f7f2;
+}
+
+.subtab-btn.active {
+    color: #2c5530;
+    border-bottom-color: #4a7c59;
+    font-weight: 600;
+}
+
+.subtab-btn i {
+    font-size: 0.9rem;
+}
+
+.subtab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.subtab-content.active {
+    display: block;
+}
+
 .tab-content {
     display: none;
     animation: fadeIn 0.5s ease;
